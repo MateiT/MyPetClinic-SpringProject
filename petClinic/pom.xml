@@ -62,7 +62,7 @@
 
     <scm>
         <developerConnection>
-            scm:git:https://github.com/MateiT/MyPetClinic-SpringProject.git
+            scm:git:git@github.com:MateiT/MyPetClinic-SpringProject.git
         </developerConnection>
       <tag>petClinic-0.0.1</tag>
   </scm>
