@@ -17,7 +17,7 @@
 
     <groupId>matei.spring</groupId>
     <artifactId>petClinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <name>petClinic</name>
     <description>petClinic</description>
@@ -69,7 +69,7 @@
         </developerConnection>
 <!--        <url>git@github.com:MateiT/MyPetClinic-SpringProject.git</url>-->
 <!--        <tag>HEAD</tag>-->
-      <tag>petClinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
