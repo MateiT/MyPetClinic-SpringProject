@@ -10,26 +10,26 @@ import java.util.Set;
 public class SpecialtyServiceMap extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Specialty findById(Long aLong) {
-        return null;
+        return super.findById(aLong);
     }
 
     @Override
     public Specialty save(Specialty object) {
-        return null;
+        return super.save(object);
     }
 
     @Override
     public Set<Specialty> findAll() {
-        return null;
+        return super.findAll();
     }
 
     @Override
     public void delete(Specialty object) {
-
+        super.delete(object);
     }
 
     @Override
     public void deleteById(Long aLong) {
-
+        super.deleteById(aLong);
     }
 }
