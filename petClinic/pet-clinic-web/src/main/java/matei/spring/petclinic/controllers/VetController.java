@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(path = "/vets")
+@RequestMapping(path = {"/vets", "/vets.html"})
 public class VetController {
     public final VetService vetService;
 
