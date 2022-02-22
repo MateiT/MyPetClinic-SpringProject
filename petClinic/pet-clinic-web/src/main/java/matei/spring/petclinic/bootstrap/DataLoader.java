@@ -1,10 +1,7 @@
 package matei.spring.petclinic.bootstrap;
 
 import matei.spring.petclinic.model.*;
-import matei.spring.petclinic.services.OwnerService;
-import matei.spring.petclinic.services.PetTypeService;
-import matei.spring.petclinic.services.SpecialtyService;
-import matei.spring.petclinic.services.VetService;
+import matei.spring.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,14 +11,18 @@ import java.time.LocalDate;
 public class DataLoader  implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetService petService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetService petService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petService = petService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -87,6 +88,13 @@ public class DataLoader  implements CommandLineRunner {
         owner2.getPets().add(fionaPet);
 
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionaPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Snizy kitty");
+
+        visitService.save(catVisit);
 
         System.out.println("Loaded Owners....");
 

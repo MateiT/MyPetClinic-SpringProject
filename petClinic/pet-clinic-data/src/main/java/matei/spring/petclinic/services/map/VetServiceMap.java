@@ -2,15 +2,15 @@ package matei.spring.petclinic.services.map;
 
 import matei.spring.petclinic.model.Specialty;
 import matei.spring.petclinic.model.Vet;
-import matei.spring.petclinic.model.Vet;
-import matei.spring.petclinic.services.PetTypeService;
 import matei.spring.petclinic.services.SpecialtyService;
 import matei.spring.petclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
